@@ -1,3 +1,8 @@
 name: "Some new copilot metrics action"
 description: "This is forwarding to real action"
 
+runs:
+  using: "composite"
+  steps:
+    - name: Rin
+      run: echo "Hello world"
