@@ -7,7 +7,7 @@ inputs:
     description: "PAT token that gives access to private repo"
   auhtorization-token:
     required: true
-    description: "PAT token to authenticate to the GitHub API so we can extract values
+    description: "PAT token to authenticate to the GitHub API so we can extract values"
     
 
 runs:
