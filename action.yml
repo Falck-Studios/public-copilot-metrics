@@ -11,10 +11,10 @@ inputs:
     
 
 runs:
-  uses: "composite"
+  using: "composite"
   steps:
     - name: "Fetch Copilot Metrics using secret action"
-      using: Falck-Studios/github-copilot-metrics@main
+      uses: Falck-Studios/github-copilot-metrics@main
       with:
         token: ${{ inputs.authorization-token }}
         org: ${{ github.repository_owner }}
