@@ -11,7 +11,7 @@ inputs:
     
 
 runs:
-  using: "composite"
+  uses: "composite"
   steps:
     - name: "Fetch Copilot Metrics using secret action"
       using: Falck-Studios/github-copilot-metrics@main
