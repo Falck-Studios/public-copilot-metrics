@@ -1,8 +1,23 @@
 name: "Some new copilot metrics action"
 description: "This is forwarding to real action"
 
+inputs:
+  license-key:
+    required: true
+    description: "PAT token that gives access to private repo"
+  auhtorization-token:
+    required: true
+    description: "PAT token to authenticate to the GitHub API so we can extract values
+    
+
 runs:
   using: "composite"
   steps:
-    - name: Rin
-      run: echo "Hello world"
+    - name: "Fetch Copilot Metrics using secret action"
+      using: Falck-Studios/github-copilot-metrics@main
+      with:
+        token: ${{ inputs.authorization-token }}
+        org: ${{ github.repository_owner }}
+        file-name: copilot-metrics
+      env:
+        GITHUB_TOKEN: ${{ inputs.license-key }}
