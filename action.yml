@@ -21,8 +21,10 @@ runs:
         repository: Falck-Studios/github-copilot-metrics
         token: ${{ inputs.license-key }}
     - name: List dir
+      shell: bash
       run: ls .
     - name: List next dir
+      shell: bash
       run: ls ./github-copilot-metrics
     - name: "Fetch Copilot Metrics using secret action"
       uses: ./github-copilot-metrics
