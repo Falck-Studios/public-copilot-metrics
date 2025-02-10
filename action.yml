@@ -5,7 +5,7 @@ inputs:
   license-key:
     required: true
     description: "PAT token that gives access to private repo"
-  auhtorization-token:
+  authorization-token:
     required: true
     description: "PAT token to authenticate to the GitHub API so we can extract values"
     
@@ -20,6 +20,7 @@ runs:
       with:
         repository: Falck-Studios/github-copilot-metrics
         token: ${{ inputs.license-key }}
+        path: ./github-copilot-metrics
     - name: List dir
       shell: bash
       run: ls .
